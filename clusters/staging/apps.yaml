@@ -8,9 +8,8 @@ spec:
   interval: 1m0s
   path: ./apps/staging
   prune: true
-  retryInterval: 2m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  timeout: 3m0s
+  timeout: 5m0s
   wait: true
