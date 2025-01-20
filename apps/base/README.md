@@ -16,3 +16,13 @@ flux create helmrelease song-library \
 --chart=./song-library \
 --export > ./apps/base/song-library/release.yaml
 ```
+
+## Create the HelmRelease for the song-library microservice
+```
+flux create helmrelease singers \
+--namespace=karaoke \
+--interval=10m \
+--source=GitRepository/karaoke-helm \
+--chart=./singers \
+--export > ./apps/base/singers/release.yaml
+```
