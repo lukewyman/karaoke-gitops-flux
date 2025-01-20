@@ -17,7 +17,7 @@ flux create helmrelease song-library \
 --export > ./apps/base/song-library/release.yaml
 ```
 
-## Create the HelmRelease for the song-library microservice
+## Create the HelmRelease for the singers microservice
 ```
 flux create helmrelease singers \
 --namespace=karaoke \

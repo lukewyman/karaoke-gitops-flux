@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: singers
+  namespace: karaoke
+spec:
+  chart:
+    spec:
+      chart: ./singers
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: karaoke-helm
+  interval: 10m0s
