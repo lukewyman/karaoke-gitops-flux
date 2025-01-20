@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: song-choices
+  namespace: karaoke
+spec:
+  chart:
+    spec:
+      chart: ./song-choices
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: karaoke-helm
+  interval: 10m0s

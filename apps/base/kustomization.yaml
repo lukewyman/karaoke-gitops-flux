@@ -4,5 +4,8 @@ namespace: karaoke
 resources:
   - namespace.yaml
   - repository.yaml
-  - song-library/release.yaml
+  - rotations/release.yaml
   - singers/release.yaml
+  - song-choices/release.yaml
+  - song-library/release.yaml
+  
